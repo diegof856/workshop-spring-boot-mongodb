@@ -19,7 +19,7 @@ public class Post implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	private String id;
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy' T 'HH:mm:ss' Z '", timezone = "GMT")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant moment;
 	private String title;
 	private String body;

@@ -1,5 +1,6 @@
 package com.felipediego.workshopmongodb.services;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +24,10 @@ public class PostService {
 
 	public List<Post> findByTitle(String text) {
 		return postRepository.searchTitle(text);
+	}
+	public List<Post> fullSearch(String text, Instant minDate, Instant maxDate) {
+	
+		return postRepository.fullSearch(text, minDate, maxDate);
 	}
 
 }
